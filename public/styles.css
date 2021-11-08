@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+body {
+  background-image:url(background1.GIF);
+  background-size:cover;
+  height:100%;
+  width:100%;
+  overflow:hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: hsl(198, 1%, 29%);
+  font-family: "Architects Daughter", cursive;
+  
+
+}
+.background_img{
+  height:80px;
+  width:100px;
+  object-fit: fill;
+  z-index: -1;
+  
+
+}
+
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+}
+
+
+
+
+li {
+  text-align: left;
+  display: flex;
+  list-style-type: none;
+  padding-left: 0pt;
+}
+
+
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  max-width: 100%;
+  min-width: 100%;
+  background: #B6C9F0;
+  background-size: 25px 25px;
+  border-radius: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.waterReminder{
+  width: 70%;
+  height: auto;
+  min-height: 200px;
+  max-width: 90%;
+  min-width: 90%;
+  background: #D6E6F2;
+  background-size: 25px 25px;
+  border-radius: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+.timerContainer{
+  width: 70%;
+  height: auto;
+  min-height: 200px;
+  max-width: 90%;
+  min-width: 90%;
+  background: #FFD3B6;
+  background-size: 25px 25px;
+  border-radius: 20px;
+  padding: 1rem;
+  box-sizing: border-box;
+
+}
+.listStyle{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+.heading h1 {
+  transform: rotate(2deg);
+  padding: 0rem 0rem;
+  font-size: 0.75rem;
+}
+
+.timerContainer h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.counter{
+  display: grid;
+  grid-gap:1.5rem;
+  grid-template-columns: repeat(3, 30%);
+}
+.increase{
+  font-size: 3rem;
+ 
+}
+.decrease{
+  font-size: 3rem;
+  
+}
+
+
+
+
+.form input {
+  background-color: transparent; 
+  border: solid 1px transparent;
+  border-bottom: dashed 3px hsl(198, 1%, 29%);
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  color: hsla(260, 2%, 25%, 0.7);
+  width: 9vw;
+  margin-bottom: 0px;
+}
+
+.popupTodo input{
+  background-color: transparent; 
+  border: solid 1px transparent;
+  border-bottom: dashed 3px hsl(198, 1%, 29%);
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  color: hsla(260, 2%, 25%, 0.7);
+  width: 80%;
+  margin-bottom: 0px;
+
+}
+
+.input {
+  background-color: transparent; 
+  border: solid 1px transparent;
+  border-bottom: dashed 3px hsl(198, 1%, 29%);
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  color: hsla(260, 2%, 25%, 0.7);
+  width: 9vw;
+  margin-bottom: 0px;
+}
+button {
+  padding: 0;
+  border: none;
+  font-family: "Architects Daughter", cursive;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  background-color: #ffeaa7;
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid hsl(198, 1%, 29%);
+  float:left;
+  margin-right:5px;
+}
+
+
+
+.popup{
+  position:fixed;
+  max-height: calc(100vh);
+  top: 0;
+  left:0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:auto;
+  border-radius: 10px;
+
+
+  
+
+}
+
+.popup-inner{
+
+  max-height: calc(100vh);
+  border-radius: 10px;
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  background-color: white;
+  overflow:auto;
+  
+  
+
+}
+
+.popup-inner .close-btn{
+  position: absolute;
+  top:32px;
+  right: 16px;
+
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.noteList{
+  display: grid;
+  grid-gap:1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+
+}
+.note{
+  background-color: #FFE3E3;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+}
+
+.topcorner{
+  margin-left: 80%;
+ }
+
+.note-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note.new {
+  background-color: #FFE3E3;
+}
+
+textarea{
+  border: none;
+  resize: none;
+  background-color: #FFE3E3;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.save{
+  background-color: #E4D8DC;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+.save:hover{
+  background-color: #C9CCD5;
+  cursor: pointer;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  background-color: rgba(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+.search input{
+  border: none;
+  background-color: rgba(233, 233, 233);
+}
+
+.search input:focus{
+  outline:none;
+}
+
